@@ -33,7 +33,7 @@ This blog/skit repo uses:
 
 ## 🔥 Episodes
 
-- [🐏 **Episode 1: RAM ni Kondoo Dume?**](episode1- CS ICT vs Kevin the Geek.md)
+- [🐏 **Episode 1: RAM ni Kondoo Dume?**](episode1.md)
 - ☁️ **Episode 2: Cloud Computing ni Mawingu ya Wapi?**
 - 🐍 **Episode 3: Python na Uchawi ya Digital**
 
