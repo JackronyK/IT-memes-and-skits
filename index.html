@@ -3,26 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CS ICT Meme Series 😂</title>
+  <title>CS ICT Meme Series</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      padding-top: 70px;
-      background-color: #f8f9fa;
+      background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1350&q=80'); /* Replace with your own image if needed */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #f1f1f1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .emoji {
-      font-size: 1.2em;
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 3rem;
+      border-radius: 10px;
+      margin-top: 80px;
+      flex: 1;
     }
-    .episode-link {
-      font-size: 1.1em;
+
+    .navbar {
+      background-color: #000000cc;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      color: #ccc;
+      background-color: #000000cc;
+    }
+
+    a {
+      color: #f5c518;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .btn-episode {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">📺 CS ICT Series</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -30,8 +63,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">🏠 Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="episode1.md">🎬 Episode 1</a></li>
-          <li class="nav-item"><a class="nav-link disabled" href="#">📝 Blog (coming soon)</a></li>
+          <li class="nav-item"><a class="nav-link" href="episode1.html">🎬 Episode 1</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">📝 Blog (Coming soon)</a></li>
         </ul>
       </div>
     </div>
@@ -39,22 +72,16 @@
 
   <!-- Main Content -->
   <div class="container text-center">
-    <h1 class="display-5 mt-4">🤣 Welcome to the CS ICT Meme Series</h1>
-    <p class="lead">Where <strong>Kenyan tech meets government logic</strong>… and chaos is born! 💥</p>
+    <h1 class="display-5 mb-4">🤣 CS ICT Meme Series</h1>
+    <p class="lead">Where tech meets government confusion... and laughter follows! 💥</p>
 
-    <hr>
-
-    <div class="mt-4">
-      <h3>📜 Latest Episode:</h3>
-      <p class="episode-link">
-        👉 <a href="episode1.md"><strong>Episode 1:</strong> RAM ni Kondoo Dume? 🐏💻</a>
-      </p>
-    </div>
-
-    <hr>
-
-    <p class="text-muted mt-4">Created with ❤️ by <a href="https://github.com/JackronyK" target="_blank">@JackronyK</a></p>
+    <a href="episode1.html" class="btn btn-warning btn-lg btn-episode">📖 Read Episode 1: RAM ni Kondoo Dume?</a>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto">
+    Created with ❤️ by <a href="https://github.com/JackronyK" target="_blank">@JackronyK</a> • Powered by GitHub Pages
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
