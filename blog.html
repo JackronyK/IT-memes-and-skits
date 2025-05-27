@@ -6,35 +6,48 @@
   <title>The Video That Shook My Wallet</title>
   <style>
     body {
+      background-color: #f2f2f2;
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      color: #333;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+    .container {
+      background: #fff;
       max-width: 800px;
       margin: 0 auto;
-      padding: 1rem;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     h1, h2, h3 {
       color: #1a1a1a;
+      margin-top: 1.5rem;
     }
     h1 {
       text-align: center;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
+    }
+    p, ul, ol, blockquote {
+      line-height: 1.6;
+      color: #333;
     }
     blockquote {
       font-style: italic;
-      color: #555;
       border-left: 4px solid #ccc;
       padding-left: 1rem;
       margin: 1rem 0;
+      color: #555;
     }
     ul, ol {
-      margin: 0.5rem 0 1rem 1.5rem;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
     }
     .video-container {
       position: relative;
       padding-bottom: 56.25%; /* 16:9 */
       height: 0;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
     }
     .video-container iframe {
       position: absolute;
@@ -43,28 +56,42 @@
       width:100%;
       height:100%;
     }
-    .take-homes {
+    .take-homes, .feedback-form {
       margin-top: 2rem;
       padding: 1rem;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       background: #fafafa;
+      border-radius: 4px;
     }
-    .take-homes textarea {
+    .take-homes textarea,
+    .feedback-form textarea,
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"] {
       width: 100%;
-      height: 120px;
-      padding: 0.5rem;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       font-size: 1rem;
     }
-    .cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 0.7rem 1.2rem;
+    .feedback-form input[type="submit"] {
       background: #007acc;
       color: #fff;
-      text-decoration: none;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .like-btn {
+      display: block;
+      margin: 1rem auto;
+      font-size: 1rem;
+      cursor: pointer;
+      background: #eee;
+      border: 1px solid #ccc;
+      padding: 0.5rem 1rem;
       border-radius: 4px;
     }
     footer {
@@ -77,111 +104,196 @@
 </head>
 <body>
 
-  <h1>💥 “The Video That Shook My Wallet” 💥</h1>
+  <div class="container">
+    <h1>💥 The Video That Shook My Wallet 💥</h1>
 
-  <p>
-    On this day, nothing indicative of what was about to happen. So my friend—let’s call them <strong>J</strong>—shares a video titled 
-    <em>“5 Lessons to Succeed Financially”</em> by Jim Rohn. At first, I almost ignored it: 
-    <q>Oh, hii video ya <em>kiingereza mingi</em>… just talk for talk’s sake.</q> 🤦‍♂️ But I was wrong.
-  </p>
+    <button id="likeBtn" class="like-btn">👍 Like <span id="likeCount">0</span></button>
 
-  <p>
-    This wasn’t mere entertainment. It felt like a <strong>Damascus moment</strong>—my eyes were about to open to some bitter–yet–sweet truths. 🍋🍭 
-    This video shouted the <strong>noble common sense</strong> that, if applied, can change anyone’s financial trajectory—especially in a time when most Kenyans are complaining of the <em>wantam</em> economics from bottom up. 📉📈
-  </p>
+    <p>
+      On this day, nothing indicative of what was about to happen. So my friend—let’s call them <strong>J</strong>—
+      shares a video titled <em>“5 Lessons to Succeed Financially”</em> by Jim Rohn. At first, I almost ignored it:
+      <q>Oh, hii video ya <em>kiingereza mingi</em>… just talk for talk’s sake.</q> 🤦‍♂️ But I was wrong.
+    </p>
 
-  <h2>Core Principles</h2>
-  <ul>
-    <li><strong>Quality over Quantity</strong><br>
-        You don’t need dozens of tips—just a few <em>actionable</em> ideas you do <em>every day</em>.</li>
-    <li><strong>Wisdom That Works</strong><br>
-        If you’re tired of surviving and stagnating, you need <em>practical</em> wisdom, not vague inspiration.</li>
-    <li><strong>Ideas + Action = Results</strong><br>
-        Knowledge without implementation ni bure. Action ni moyo.</li>
-  </ul>
+    <p>
+      This wasn’t mere entertainment. It felt like a <strong>Damascus moment</strong>—my eyes were about to open to
+      some bitter–yet–sweet truths. 🍋🍭 This video shouted the <strong>noble common sense</strong> that, if applied,
+      can change anyone’s financial trajectory—especially now, when most Kenyans complain of the <em>wantam</em> economics.
+    </p>
 
-  <h2>Lesson 1: Value Makes the Difference, Not Time</h2>
-  <ol>
-    <li><strong>Get Paid for Value, Not Hours</strong>
-      <ul>
-        <li>The marketplace rewards what you <strong>deliver</strong>, not how long you labor.</li>
-        <li>Effort alone won’t make you rich—<strong>value</strong> will.</li>
-        <li>Your bills, struggles, or good heart don’t matter to the market; your <strong>value</strong> does.</li>
-      </ul>
-    </li>
-    <li><strong>Self-Assessment & Improvement</strong>
-      <ul>
-        <li>If you dislike your income, look in the mirror: “How can I <strong>increase</strong> my value?”</li>
-        <li>Replace <em>waiting</em> and <em>wishing</em> with <strong>learning</strong>, <strong>growing</strong>, and <strong>skill-building</strong>.</li>
-      </ul>
-    </li>
-    <li><strong>Daily Value Investments</strong>
-      <ul>
-        <li>Read books, study your craft, practice relentlessly.</li>
-        <li>You don’t need fame—just <strong>excellence</strong> in something people will pay for.</li>
-      </ul>
-    </li>
-  </ol>
-  <blockquote>“Don’t wish for better pay; wish to become a better person.”</blockquote>
+    <h2>Core Principles</h2>
+    <ul>
+      <li><strong>Quality over Quantity</strong>: You don’t need dozens of tips—just a few
+        <em>actionable</em> ideas you do <em>every day</em>.</li>
+      <li><strong>Wisdom That Works</strong>: If you’re tired of surviving and stagnating, you need
+        <em>practical</em> wisdom, not vague inspiration.</li>
+      <li><strong>Ideas + Action = Results</strong>: Knowledge without implementation ni bure. Action ni moyo.</li>
+    </ul>
 
-  <h3>Ways to Raise Your Value</h3>
-  <ul>
-    <li>Read field-specific books.</li>
-    <li>Solve common, costly problems.</li>
-    <li>Observe top performers—study their habits.</li>
-    <li>Practice consistently—<em>repetition builds mastery</em>.</li>
-    <li>Teach others—<em>to teach is to learn twice</em>.</li>
-  </ul>
+    <h2>Lesson 1: Value Makes the Difference, Not Time</h2>
+    <ol>
+      <li><strong>Get Paid for Value, Not Hours</strong>
+        <ul>
+          <li>The marketplace rewards what you <strong>deliver</strong>, not how long you labor.</li>
+          <li>Effort alone won’t make you rich—<strong>value</strong> will.</li>
+          <li>Your bills, struggles, or good heart don’t matter to the market; your <strong>value</strong> does.</li>
+        </ul>
+      </li>
+      <li><strong>Self-Assessment & Improvement</strong>
+        <ul>
+          <li>If you dislike your income, look in the mirror: “How can I <strong>increase</strong> my value?”</li>
+          <li>Replace <em>waiting</em> and <em>wishing</em> with <strong>learning</strong>, <strong>growing</strong>,
+            and <strong>skill-building</strong>.</li>
+        </ul>
+      </li>
+      <li><strong>Daily Value Investments</strong>
+        <ul>
+          <li>Read books, study your craft, practice relentlessly.</li>
+          <li>You don’t need fame—just <strong>excellence</strong> in something people will pay for.</li>
+        </ul>
+      </li>
+    </ol>
+    <blockquote>“Don’t wish for better pay; wish to become a better person.”</blockquote>
 
-  <!-- Repeat similarly for Lessons 2–5... -->
+    <h3>Ways to Raise Your Value</h3>
+    <ul>
+      <li>Read field-specific books.</li>
+      <li>Solve common, costly problems.</li>
+      <li>Observe top performers—study their habits.</li>
+      <li>Practice consistently—<em>repetition builds mastery</em>.</li>
+      <li>Teach others—<em>to teach is to learn twice</em>.</li>
+    </ul>
 
-  <h2>Lesson 5: Environment Shapes Your Success</h2>
-  <ol>
-    <li><strong>Your Peer Group Matters</strong>
-      <ul>
-        <li>You rise to the level of the five people you spend the most time with.</li>
-        <li>Easy crowds keep you comfortable but stifle growth.</li>
-      </ul>
-    </li>
-    <li><strong>Seek Growth-Focused Circles</strong>
-      <ul>
-        <li>Join groups where standards are high and conversations challenge you.</li>
-        <li>Find people speaking to your future, not your past.</li>
-      </ul>
-    </li>
-    <li><strong>Practical Questions</strong>
-      <ul>
-        <li>Who are my top five?</li>
-        <li>Do they challenge or just agree?</li>
-        <li>Are they pulling me forward or dragging me back?</li>
-      </ul>
-    </li>
-  </ol>
-  <blockquote>“Success is contagious—surround yourself with those who inspire growth.”</blockquote>
+    <h2>Lesson 2: Self-Education vs. Formal Education</h2>
+    <ol>
+      <li><strong>Living vs. Thriving</strong>
+        <ul>
+          <li>Formal education makes a living; <strong>self-education</strong> makes a fortune.</li>
+          <li>What you learn <em>after</em> school determines how far you’ll go.</li>
+        </ul>
+      </li>
+      <li><strong>Building the Habit of Learning</strong>
+        <ul>
+          <li>Self-education happens in morning reading, evening reflection, conversations, and curiosity-driven study.</li>
+          <li>Wealthy people never stop asking questions—they learn constantly.</li>
+        </ul>
+      </li>
+      <li><strong>Bridging the Gap</strong>
+        <ul>
+          <li>The gap between where you are and where you want to be is filled with <strong>knowledge</strong>,
+            <strong>practice</strong>, <strong>experience</strong>, and <strong>mentorship</strong>.</li>
+        </ul>
+      </li>
+    </ol>
+    <blockquote>“School gives structure; self-education teaches you how to think, adapt, and create.”</blockquote>
 
-  <h2>Watch & Reflect</h2>
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/QhctuuEHxvQ" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+    <h2>Lesson 3: Work Harder on Yourself Than Your Job</h2>
+    <ol>
+      <li><strong>Job vs. Personal Growth</strong>
+        <ul>
+          <li>Your job provides <strong>stability</strong>; personal growth provides <strong>freedom</strong>.</li>
+          <li>Investing in yourself changes your job, income, confidence, and future.</li>
+        </ul>
+      </li>
+      <li><strong>Daily Reflection Questions</strong>
+        <ul>
+          <li>What did I learn today that made me better?</li>
+          <li>What did I practice today that sharpened my skill?</li>
+          <li>What did I do today that moved me closer to my goal?</li>
+        </ul>
+      </li>
+      <li><strong>Intentional Growth Plan</strong>
+        <ul>
+          <li>Read one challenging book per month.</li>
+          <li>Journal goals and lessons each evening.</li>
+          <li>Listen to mentors and reflect.</li>
+          <li>Do hard things that build character.</li>
+        </ul>
+      </li>
+    </ol>
+    <blockquote>“Stop chasing success—let success chase you by investing in yourself.”</blockquote>
+
+    <h2>Lesson 4: Profits Are Better Than Wages</h2>
+    <ol>
+      <li><strong>Wages vs. Profits</strong>
+        <ul>
+          <li>Wages are controlled by someone else; <strong>profits</strong> come from what you build or own.</li>
+          <li>Profits can make a fortune; wages only make a living.</li>
+        </ul>
+      </li>
+      <li><strong>Think Like a Creator</strong>
+        <ul>
+          <li>Shift mindset from employee to <strong>value creator</strong>: assets over income, leverage over time.</li>
+        </ul>
+      </li>
+      <li><strong>Starting Profit Potential</strong>
+        <ul>
+          <li>Launch a side hustle on weekends or evenings.</li>
+          <li>Create once, sell often (templates, courses, digital tools).</li>
+          <li>Build a digital presence & learn to sell.</li>
+          <li>Partner with others to expand reach.</li>
+        </ul>
+      </li>
+    </ol>
+    <blockquote>“To get financial freedom, begin thinking like a creator of value, not just an employee.”</blockquote>
+
+    <h2>Lesson 5: Environment Shapes Your Success</h2>
+    <ol>
+      <li><strong>Your Peer Group Matters</strong>
+        <ul>
+          <li>You rise to the level of the five people you spend the most time with.</li>
+          <li>Easy crowds keep you comfortable but stifle growth.</li>
+        </ul>
+      </li>
+      <li><strong>Seek Growth-Focused Circles</strong>
+        <ul>
+          <li>Join groups where standards are high and conversations challenge you.</li>
+          <li>Find people speaking to your future, not your past.</li>
+        </ul>
+      </li>
+      <li><strong>Practical Questions</strong>
+        <ul>
+          <li>Who are my top five?</li>
+          <li>Do they challenge or just agree?</li>
+          <li>Are they pulling me forward or dragging me back?</li>
+        </ul>
+      </li>
+    </ol>
+    <blockquote>“Success is contagious—surround yourself with those who inspire growth.”</blockquote>
+
+    <h2>Watch & Reflect</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QhctuuEHxvQ?si=JseFjRVKi05X0Yb5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="take-homes">
+      <h3>Share Your Take-Homes</h3>
+      <p>Go through the notes and, if you don’t mind, share your take-homes below. If <em>imekunice</em>, like it and let’s discuss!</p>
+      <textarea placeholder="Paste your take-homes here..."></textarea>
+    </div>
+
+    <div class="feedback-form">
+      <h3>Send Me Your Feedback</h3>
+      <form action="mailto:karani.riungu.a@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="feedback" placeholder="Your feedback" required></textarea>
+        <input type="submit" value="Send Feedback">
+      </form>
+    </div>
+
+    <footer>
+      &copy; 2025 by Jackrony. Built with ❤️ and actionable wisdom.
+    </footer>
   </div>
 
-  <div class="take-homes">
-    <h3>Share Your Take-Homes</h3>
-    <p>Go through the notes and, if you don’t mind, share your take-homes below. If <em>imekunice</em>, like it and let’s discuss!</p>
-    <textarea placeholder="Paste your take-homes here..."></textarea>
-  </div>
-
-  <div class="cta">
-    <a href="#take-homes">Share Your Insights</a>
-  </div>
-
-  <footer>
-    &copy; 2025 by [Your Name]. Built with ❤️ and actionable wisdom.
-  </footer>
+  <script>
+    let count = 0;
+    document.getElementById('likeBtn').onclick = function() {
+      count++;
+      document.getElementById('likeCount').innerText = count;
+    };
+  </script>
 
 </body>
 </html>
